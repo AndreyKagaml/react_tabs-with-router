@@ -14,6 +14,8 @@ export const TabsPage: React.FC<Props> = ({ tabs }) => {
   useEffect(() => {
     if (tabId) {
       setCurrentTab(tabs?.find(item => item.id === tabId) ?? null);
+    } else {
+      setCurrentTab(null);
     }
   }, [tabId]);
 
